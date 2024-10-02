@@ -14,11 +14,11 @@ jobs:
           fetch-depth: 0
       - name: Set up Go
         uses: actions/setup-go@v3
-      - name: Import GPG key
-        id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v5
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+      # - name: Import GPG key
+      #   id: import_gpg
+      #   uses: crazy-max/ghaction-import-gpg@v5
+      #   with:
+      #     gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
       - name: Install ceph
         run: |
           wget -q -O- 'https://download.ceph.com/keys/release.asc' | sudo apt-key add -
